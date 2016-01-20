@@ -15,7 +15,8 @@ namespace CustomWhatever
         }
         public void insert(string stringToInsert)
         {
-            linkedList.InsertIntoList(3, stringToInsert);
+            int startIndex = 3;
+            linkedList.InsertIntoList(startIndex, stringToInsert);
         }
 
         public void remove(int startIndex, int numCharsToRemovre)

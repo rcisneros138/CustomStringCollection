@@ -43,8 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contestant.cs" />
     <Compile Include="CustomArray.cs" />
     <Compile Include="CustomLinkedList.cs" />
+    <Compile Include="CustomSortedList.cs" />
+    <Compile Include="ISweepStakesManager.cs" />
+    <Compile Include="SweepstakeQueManager.cs" />
+    <Compile Include="Sweepstakes.cs" />
+    <Compile Include="SweepstakeStackManager.cs" />
     <Compile Include="SystemLinkedList.cs" />
     <Compile Include="CustomString.cs" />
     <Compile Include="ICustomString.cs" />
