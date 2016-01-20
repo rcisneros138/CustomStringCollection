@@ -11,9 +11,15 @@ namespace CustomWhatever
         string ConvertedString;
         string[] ConvertedArray;
         char[] ArrayToConvert;
-        public CustomArray(char[] Array)
+       
+        public CustomArray(string toBeArray)
         {
-            ArrayToConvert = Array;
+            ArrayToConvert = toBeArray.ToArray();
+        }
+        public string toString()
+        {
+            string finalString = new string(ArrayToConvert);
+            return finalString;
         }
 
         public void insert(string stringToInsert)

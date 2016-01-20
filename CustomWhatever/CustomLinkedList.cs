@@ -9,14 +9,31 @@ namespace CustomWhatever
     public class CustomLinkedList:ICustomString
     {
         LinkedList linkedList = new LinkedList();
+
+        public CustomLinkedList(string stringToPass)
+        {
+
+        }
+        public string toString()
+        {
+            char[] allCharacters = linkedList.getAllNodes();
+            string combinedCharacters = new string(allCharacters);
+            return combinedCharacters;
+
+        }
         public void WriteAllValue()
         {
             linkedList.printAllNodes();
         }
         public void insert(string stringToInsert)
         {
+            char[] charArrayOfString = stringToInsert.ToArray<char>();
             int startIndex = 3;
-            linkedList.InsertIntoList(startIndex, stringToInsert);
+            foreach (char letter in charArrayOfString)
+            {
+                linkedList.InsertIntoList(startIndex, letter);
+            }
+            
         }
 
         public void remove(int startIndex, int numCharsToRemovre)
@@ -28,7 +45,7 @@ namespace CustomWhatever
         {
             return linkedList.Count();
         }
-        public void Add(string value)
+        public void Add(char value)
         {
             linkedList.addNode(value);
         }

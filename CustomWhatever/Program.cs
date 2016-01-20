@@ -10,27 +10,66 @@ namespace CustomWhatever
     {
         static void Main(string[] args)
         {
-            CustomLinkedList customLinkedList = new CustomLinkedList();
+            #region CustomLinkedList
+            //CustomLinkedList customLinkedList = new CustomLinkedList();
 
-            customLinkedList.Add("A");
-            customLinkedList.Add("B");
-            customLinkedList.Add("C");
-            customLinkedList.Add("D");
-            customLinkedList.Add("E");
-            customLinkedList.insert("Q");
+            //customLinkedList.Add('a');
+            //customLinkedList.Add('B');
+            //customLinkedList.Add('C');
+            //customLinkedList.Add('D');
+            //customLinkedList.Add('E');
+            //customLinkedList.insert("Q");
 
-            Console.WriteLine("before: ");
-            customLinkedList.WriteAllValue();
-            Console.WriteLine("count: ");
-            Console.WriteLine(customLinkedList.length());
+            //Console.WriteLine("before: ");
+            //customLinkedList.WriteAllValue();
+            //Console.WriteLine("count: ");
+            //Console.WriteLine(customLinkedList.length());
 
-            customLinkedList.remove(2, 2);
+            //customLinkedList.remove(2, 2);
 
-            Console.WriteLine("After: ");
-            customLinkedList.WriteAllValue();
+            //Console.WriteLine("After: ");
+            //customLinkedList.WriteAllValue();
 
-            Console.WriteLine("Count: ");
-            Console.WriteLine(customLinkedList.length().ToString());
+            //Console.WriteLine("Count: ");
+            //Console.WriteLine(customLinkedList.length().ToString());
+            #endregion
+            #region sweepstakes
+            //SweepstakeQueManager sweepstakesQueManager = new SweepstakeQueManager();
+            //SweepstakeStackManager sweepstakesStackManager = new SweepstakeStackManager();
+
+            //Sweepstakes probablyAScamSweepstake = new Sweepstakes("Probably A Scam Sweepstakes");
+            //Sweepstakes AlsoNotAScamSweepstake = new Sweepstakes("Not A Scam Sweepstakes");
+
+            //sweepstakesQueManager.InsertSweepstakes(probablyAScamSweepstake);
+            //sweepstakesQueManager.InsertSweepstakes(AlsoNotAScamSweepstake);
+
+
+            //Console.WriteLine(sweepstakesQueManager.GetNextSweepstakesWinner().SweepstakesName);
+
+            //sweepstakesStackManager.InsertSweepstakes(probablyAScamSweepstake);
+
+            //Console.WriteLine(sweepstakesStackManager.GetNextSweepstakesWinner().SweepstakesName);
+            #endregion
+            #region sortedList
+            //string x = "Hello";
+            //string y = "Hello0";
+
+            //CustomArray customArray = new CustomArray(x);
+            //CustomLinkedList linkedList = new CustomLinkedList(x);
+            //CustomString customString = new CustomString(y);
+
+
+            //CustomSortedList sortedList = new CustomSortedList();
+            //sortedList.addToList(customArray);
+            //sortedList.addToList(linkedList);
+            //sortedList.addToList(customString);
+
+            //foreach (KeyValuePair<int,ICustomString> item in sortedList.ListofCustomStringObjects)
+            //{
+            //    string itemToPrint = String.Format("{0} {1}", item.Key, item.Value);
+            //    Console.WriteLine(itemToPrint);
+            //}
+            #endregion
 
 
             Console.ReadLine();

@@ -6,18 +6,15 @@ using System.Threading.Tasks;
 
 namespace CustomWhatever
 {
-    class Sweepstakes
+   public class Sweepstakes
     {
-        string SweepstakesName;
+        public string SweepstakesName;
         List<Contestant> Contestants;
-
-        public Sweepstakes()
-        {
-            Contestants = new List<Contestant>();
-        }       
-        Sweepstakes(string name)
+        
+        public Sweepstakes(string name)
         {
             SweepstakesName = name;
+            Contestants = new List<Contestant>();
         }
 
         void RegisterContestant(Contestant contestant)

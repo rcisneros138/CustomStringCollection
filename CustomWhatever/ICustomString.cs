@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace CustomWhatever
 {
-    interface ICustomString
+    public interface ICustomString
     {
+        string toString();
         void insert(string stringToInsert);
 
         void remove(int startIndex, int numCharsToRemovre);

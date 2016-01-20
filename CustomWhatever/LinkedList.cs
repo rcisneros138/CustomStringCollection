@@ -9,7 +9,26 @@ namespace CustomWhatever
     class LinkedList
     {
         public Node head;
- 
+
+        public char[] getAllNodes()
+        {
+            char[] allCharacters = new char[Count()];
+            List<Node> allNodes = new List<Node>();
+            Node cur = head;
+            while (cur.Next != null)
+            {
+                allNodes.Add(cur);
+                cur = cur.Next;
+            }
+            allNodes.Add(cur);
+            for (int i = 0; i < allCharacters.Length; i++)
+            {
+                allCharacters[i] = allNodes[i].Data;
+            }
+            return allCharacters;
+        }
+      
+
         public void printAllNodes()
         {
             Node cur = head;
@@ -21,10 +40,10 @@ namespace CustomWhatever
             Console.WriteLine(cur.Data.ToString());
         }
 
-        public void InsertIntoList(int index,string value)
+        public void InsertIntoList(int index, char value)
         {
             Node current = head;
-            for (int i = 0; i < index-1; i++)
+            for (int i = 0; i < index - 1; i++)
             {
                 current = current.Next;
             }
@@ -32,14 +51,14 @@ namespace CustomWhatever
             newNode.Next = current.Next;
             newNode.Data = value;
             current.Next = newNode;
-            
+
         }
 
         public void Remove(int index, int amountToRemove)
         {
             Node current = head;
             Node nodeRemovedUpTo = head;
-            for (int i = 0; i < index-1; i++)
+            for (int i = 0; i < index - 1; i++)
             {
                 current = current.Next;
             }
@@ -50,7 +69,7 @@ namespace CustomWhatever
             current.Next = nodeRemovedUpTo.Next;
         }
 
-        public void addNode(string data)
+        public void addNode(char data)
         {
             if (head == null)
             {
@@ -76,12 +95,13 @@ namespace CustomWhatever
         {
             int counter = 0;
             Node currentNode = head;
-            while (currentNode !=null)
+            while (currentNode != null)
             {
                 currentNode = currentNode.Next;
                 counter++;
             }
             return counter;
         }
+    
     }
 }

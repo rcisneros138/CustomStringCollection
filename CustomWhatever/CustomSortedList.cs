@@ -6,22 +6,20 @@ using System.Threading.Tasks;
 
 namespace CustomWhatever
 {
-    class CustomSortedList
+    public class CustomSortedList
     {
-        SortedList<ICustomString, > ListofCustomStringObjects;
-       public void insert(string stringToInsert)
+       public SortedList<int,ICustomString> ListofCustomStringObjects;
+        public CustomSortedList()
         {
-
+            ListofCustomStringObjects = new SortedList<int, ICustomString>();
         }
 
-       public void remove(int startIndex, int numCharsToRemovre)
+        public void addToList(ICustomString customObject)
         {
+            int length = customObject.length();
 
+            ListofCustomStringObjects.Add(length,customObject);
         }
 
-       public int length()
-        {
-            return 5;
-        }
     }
 }

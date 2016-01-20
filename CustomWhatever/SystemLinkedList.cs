@@ -10,6 +10,11 @@ namespace CustomWhatever
     {
         LinkedList<string> ListToBeConverted;
         string convertedString;
+        public string toString()
+        {
+            // not sure what to return
+            return ListToBeConverted.ToString();
+        }
         public SystemLinkedList(LinkedList<string> linkedList)
         {
             ListToBeConverted = linkedList;

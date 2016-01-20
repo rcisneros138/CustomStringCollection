@@ -9,10 +9,16 @@ namespace CustomWhatever
    public class CustomString:ICustomString
     {
         string StringToConvert;
-        public CustomString(string item)
+        public CustomString(string passedString)
         {
-            StringToConvert = item;
+            StringToConvert = passedString;
         }
+
+        public string toString()
+        {
+            return StringToConvert;
+        }
+       
         public void insert(string stringToInsert)
         {
             int index = 0;

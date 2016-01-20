@@ -3,6 +3,6 @@
     public class Node
     {
        public Node Next;
-       public string Data;
+       public char Data;
     }
 }

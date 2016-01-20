@@ -8,7 +8,7 @@ namespace CustomWhatever
 {
     class SweepstakeStackManager:ISweepStakesManager
     {
-        Stack<Sweepstakes> sweepstakesStack;
+       public Stack<Sweepstakes> sweepstakesStack;
 
         public SweepstakeStackManager()
         {
