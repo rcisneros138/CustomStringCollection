@@ -8,7 +8,9 @@ namespace CustomWhatever
 {
    public class Sweepstakes
     {
+        Random randomNumber = new Random();
         public string SweepstakesName;
+        public string ContestantInformation;
         List<Contestant> Contestants;
         
         public Sweepstakes(string name)
@@ -17,21 +19,26 @@ namespace CustomWhatever
             Contestants = new List<Contestant>();
         }
 
-        void RegisterContestant(Contestant contestant)
+        public List<Contestant> contestantList
+        {
+            get { return Contestants; }
+        }
+
+        public void RegisterContestant(Contestant contestant)
         {
             Contestants.Add(contestant);
         }
 
-        string pickWinner()
+        public string pickWinner()
         {
-            Random randomNumber = new Random();
+           
             int indexOfWinner = randomNumber.Next(0, Contestants.Count()-1);
             return Contestants[indexOfWinner].name; 
         }
         
-        void PrintContestantInfo(Contestant contestant)
+        public void PrintContestantInfo(Contestant contestant)
         {
-            string ContestantInformation = String.Format("Name: {0}, Age: {1} ,HomeTown: {2}",contestant.name, contestant.age, contestant.homeTown);
+            ContestantInformation = String.Format("Name: {0}, Age: {1} ,HomeTown: {2}",contestant.name, contestant.age, contestant.homeTown);
             Console.WriteLine(ContestantInformation);
         }
 

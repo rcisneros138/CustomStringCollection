@@ -11,6 +11,14 @@ namespace CustomWhatever
         public string name;
         public int age;
         public string homeTown;
+        public Contestant(string contestantName, int contestantAge, string contestantHomeTown)
+        {
+            name = contestantName;
+            age = contestantAge;
+            homeTown = contestantHomeTown;
+
+        }
+       
         
     }
 }

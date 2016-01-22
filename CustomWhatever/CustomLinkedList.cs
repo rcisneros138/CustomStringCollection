@@ -10,10 +10,7 @@ namespace CustomWhatever
     {
         LinkedList linkedList = new LinkedList();
 
-        public CustomLinkedList(string stringToPass)
-        {
-
-        }
+      
         public string toString()
         {
             char[] allCharacters = linkedList.getAllNodes();

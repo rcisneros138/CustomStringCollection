@@ -10,23 +10,48 @@ namespace CustomWhatever
     {
         LinkedList<string> ListToBeConverted;
         string convertedString;
-        public string toString()
-        {
-            // not sure what to return
-            return ListToBeConverted.ToString();
-        }
         public SystemLinkedList(LinkedList<string> linkedList)
         {
             ListToBeConverted = linkedList;
         }
+        public void addToList(string itemToAdd)
+        {
+            ListToBeConverted.AddLast(itemToAdd);
+        }
+        
+        public string toString()
+        {
+            string finalString = String.Join("", ListToBeConverted);
+            return finalString;
+        }
+        
         public void insert(string stringToInsert)
         {
-            LinkedListNode<string> node = ListToBeConverted.Find("one");
+            string value = ListToBeConverted.ElementAt(1);
+            LinkedListNode<string> node = ListToBeConverted.Find(value);
             ListToBeConverted.AddAfter(node, stringToInsert);
         }
 
+        public void insert(int index,string stringToInsert)
+        {
+            string value = ListToBeConverted.ElementAt(index);
+            LinkedListNode<string> node = ListToBeConverted.Find(value);
+            ListToBeConverted.AddAfter(node, stringToInsert);
+        }
+
+
+
         public void remove(int startIndex, int numCharsToRemovre)
         {
+
+            for (int i = startIndex; i < numCharsToRemovre -1; i++)
+            {
+                string value = ListToBeConverted.ElementAt(startIndex);
+                LinkedListNode<string> node = ListToBeConverted.Find(value);
+                ListToBeConverted.Remove(value);
+                i++;
+            }
+                
             
         }
 
